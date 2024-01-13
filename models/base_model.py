@@ -19,12 +19,15 @@ class BaseModel:
         self.id = str(uuid4())
         self.created_at = datetime.today()
         self.updated_at = datetime.today()
-        if len(kwargs) != 0:
+        
+        if kwargs:
             for ky, val in kwargs.items():
-                if ky == "created_at" or ky == "updated_at":
-                    self.__dict__[ky] = datetime.strptime(val, t_form)
+                if ky == "__class__":
+                    continue
+                elif ky in ["creted_at", "updated_at"]:
+                    setattr(self, ky, datetime.strptime(val, t_form))
                 else:
-                    self.__dict__[ky] = val
+                    setattr(self, ky, val)
         else:
             models.storage.new(self)
 
