@@ -7,9 +7,9 @@ class Review(BaseModel):
     """
     Review class that inherits from BaseModel.
     Attributes:
-        place_id (str): The Place id.
-        user_id (str): The User id.
-        text (str): The text of the review.
+        place_id (str): The ID of the Place .
+        user_id (str): The ID of the User .
+        text (str): The text of reviewing.
     """
     place_id = ""
     user_id = ""

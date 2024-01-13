@@ -8,8 +8,8 @@ class City(BaseModel):
     Represent a city.
 
     Attributes:
-        state_id (str): The state id.
-        name (str): The name of the city.
+        state_id (str): The idof the state .
+        name (str): The city's name.
     """
     state_id = ""
     name = ""
