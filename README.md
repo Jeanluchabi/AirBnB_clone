@@ -1,2 +1,4 @@
-# AirBnB_clone
-This a project on AirBnB_clone done by Jean Luc HABIMANA and Pacifique Nshuti
+0x00. AirBnB clone - The console
+
+this is the first step to build web application :AirBnB clone 
+
