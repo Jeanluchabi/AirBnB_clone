@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines the HBnB console."""
+"""specifies the HBnB console."""
 import cmd
 import re
 from shlex import split
@@ -15,8 +15,8 @@ from models.review import Review
 
 def parse(arg):
     """
-    Parse a given string and split it into a list of elements
-    based on curly braces and brackets.
+    Tokenize a provided string by identifying and separating 
+    elements using curly braces and brackets.
     """
     curly_braces = re.search(r"\{(.*?)\}", arg)
     brackets = re.search(r"\[(.*?)\]", arg)
@@ -41,7 +41,7 @@ def parse(arg):
 
 class HBNBCommand(cmd.Cmd):
     """
-    Defines the HolbertonBnB command interpreter's purpose.
+    Specifies the function and role of the HolbertonBnB command interpreter.
 
     Attributes:
         prompt (str): The command prompt.
@@ -58,11 +58,11 @@ class HBNBCommand(cmd.Cmd):
     }
 
     def emptyline(self):
-        """Take no action when an empty line is received."""
+        """Do nothing upon receiving an empty line."""
         pass
 
     def default(self, arg):
-        """Default behavior for cmd module incase the input is invalid"""
+        """The default action for the cmd module when the input is invalid"""
         argdict = {
             "all": self.do_all,
             "show": self.do_show,
